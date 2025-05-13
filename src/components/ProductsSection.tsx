@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Food, BookOpen, Collar } from "lucide-react";
+import { ShoppingCart, Utensils, Dog, Cat } from "lucide-react";
 
 const ProductCard = ({ 
   title, 
@@ -38,21 +38,21 @@ const ProductsSection = () => {
     {
       title: "Premium Pet Food",
       description: "Nutritious and delicious foods for all pets, from everyday meals to special treats.",
-      icon: Food,
+      icon: Utensils,
       bgColor: "bg-blue-100",
       iconColor: "text-pet-blue"
     },
     {
       title: "Stylish Collars",
       description: "Comfortable and durable collars, leashes, and harnesses for daily walks.",
-      icon: Collar,
+      icon: Dog,
       bgColor: "bg-orange-100",
       iconColor: "text-pet-orange"
     },
     {
       title: "Interactive Toys",
       description: "Fun and engaging toys to keep your pets active, entertained, and mentally stimulated.",
-      icon: BookOpen,
+      icon: Cat,
       bgColor: "bg-teal-100",
       iconColor: "text-pet-teal"
     }
