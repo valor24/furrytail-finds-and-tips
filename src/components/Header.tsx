@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { 
   ShoppingCart, 
   Menu, 
@@ -25,17 +26,21 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Dog className="h-8 w-8 text-pet-blue" />
-            <span className="text-2xl font-bold text-primary">PetCare</span>
+            <Link to="/">
+              <div className="flex items-center space-x-2">
+                <Dog className="h-8 w-8 text-pet-blue" />
+                <span className="text-2xl font-bold text-primary">PetCare</span>
+              </div>
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="nav-link">Home</a>
-            <a href="#pets" className="nav-link">Our Pets</a>
-            <a href="#products" className="nav-link">Products</a>
-            <a href="#guides" className="nav-link">Care Guides</a>
-            <a href="#" className="nav-link">About Us</a>
+            <Link to="/" className="nav-link font-medium">Home</Link>
+            <Link to="/pets" className="nav-link font-medium">Our Pets</Link>
+            <Link to="/products" className="nav-link font-medium">Products</Link>
+            <Link to="/care-guides" className="nav-link font-medium">Care Guides</Link>
+            <Link to="/about" className="nav-link font-medium">About Us</Link>
           </nav>
           
           {/* Right side actions */}
@@ -67,21 +72,21 @@ const Header = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}>
           <nav className="flex flex-col space-y-6 text-lg">
-            <a href="#" className="nav-link flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/" className="nav-link flex items-center space-x-2 font-semibold" onClick={() => setIsMenuOpen(false)}>
               <span>Home</span>
-            </a>
-            <a href="#pets" className="nav-link flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <Link to="/pets" className="nav-link flex items-center space-x-2 font-semibold" onClick={() => setIsMenuOpen(false)}>
               <span>Our Pets</span>
-            </a>
-            <a href="#products" className="nav-link flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <Link to="/products" className="nav-link flex items-center space-x-2 font-semibold" onClick={() => setIsMenuOpen(false)}>
               <span>Products</span>
-            </a>
-            <a href="#guides" className="nav-link flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <Link to="/care-guides" className="nav-link flex items-center space-x-2 font-semibold" onClick={() => setIsMenuOpen(false)}>
               <span>Care Guides</span>
-            </a>
-            <a href="#" className="nav-link flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+            </Link>
+            <Link to="/about" className="nav-link flex items-center space-x-2 font-semibold" onClick={() => setIsMenuOpen(false)}>
               <span>About Us</span>
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
